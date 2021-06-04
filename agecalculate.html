@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Age Calculator</title>
+    <style media="screen">
+      h1{
+        text-align : center;
+      }
+      p{
+        text-align : center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>나이 계산 프로그램</h1>
+    <p onclick="agecal()" id="display">Click</p>
+    <script>
+      var username = prompt("성함을 입력해주세요")
+      var nowyear = prompt("현재 년도를 입력해주세요","YYYY");
+      var birthyear = prompt("태어난 년도를 입력해주세요","YYYY");
+
+      function agecal() {
+        var age = nowyear - birthyear + 1;
+        document.getElementById('display').innerHTML = username + "님의 나이는" + age + "입니다.";
+      }
+    </script>
+  </body>
+</html>
